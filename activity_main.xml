@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonstart"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/ic_button"
+        android:fontFamily="cursive"
+        android:text="Start"
+        android:textColor="#ECE1E1"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="29"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressdrawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+
+    <TextView
+        android:id="@+id/textquestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/textScore"
+        app:layout_constraintStart_toEndOf="@+id/textViewTimer"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textquestion">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:padding="4dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonanswer0"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="240dp"
+                android:background="@drawable/answerbtnback"
+                android:text="@string/buttonAnswer0"
+                android:textColor="#F4F1F1"
+                android:textStyle="bold"
+                app:backgroundTint="#6DAFE4"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+            <Button
+                android:id="@+id/buttonanswer1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="240dp"
+                android:background="@drawable/answerbtnback"
+                android:text="@string/buttonAnswer1"
+                android:textColor="#F4F1F1"
+                app:backgroundTint="#E6BC7D"
+                tools:ignore="TextContrastCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:padding="4dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonaswer2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="240dp"
+                android:background="@drawable/answerbtnback"
+                android:text="@string/buttonAnswer2"
+                android:textColor="#F4F1F1"
+                android:textStyle="bold"
+                app:backgroundTint="#6CE6DB"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/buttonanswer3"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="240dp"
+                android:background="@drawable/answerbtnback"
+                android:text="@string/buttonAnswer3"
+                android:textColor="#F4F1F1"
+                android:textStyle="bold"
+                app:backgroundTint="#3F51B5"
+                tools:ignore="TextContrastCheck" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewMessage"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
